@@ -1,0 +1,11 @@
+<div class="container py-4">
+  <div class="row">
+    <div class="col">
+      <app-form (addTaskEvent)="addTask($event)" [task]="taskSelected"></app-form>
+    </div>
+    <div class="col">
+      <app-tasks [tasks]="tasks" (filterById)="onFilterById($event)" (updateTaskEvent)="onUpdateTaskEvent($event)"
+        (removeTaskEvent)="onRemoveTaskEvent($event)"></app-tasks>
+    </div>
+  </div>
+</div>

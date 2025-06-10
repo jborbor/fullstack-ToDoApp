@@ -1,0 +1,42 @@
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: db_todoapp
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./todo_app_database/sql:/docker-entrypoint-initdb.d
+    networks:
+      - jborbor-network
+
+  backend:
+    build: ./todo_app_backend
+    container_name: backend
+    mem_limit: 800m
+    ports:
+      - "8080:8080"
+    networks:
+      - jborbor-network
+    depends_on:
+      - mysql
+
+  frontend:
+    build: ./todo_app_frontend
+    container_name: frontend
+    mem_limit: 800m
+    ports:
+      - "4200:80"
+    networks:
+      - jborbor-network
+
+volumes:
+  mysql-data:
+
+networks:
+  jborbor-network:
