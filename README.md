@@ -25,8 +25,8 @@ fullstack-HotelReservation/
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/jborbor/fullstack-ToDoApp
-cd fullstack-todoapp
+git clone https://github.com/jborbor/fullstack-ToDoApp.git
+cd fullstack-ToDoApp
 ```
 
 2. Levanta los contenedores:
