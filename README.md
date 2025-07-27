@@ -1,6 +1,6 @@
 # ToDo App - Full Stack Project
 
-Aplicacion para el manejo de Tareas, desarrollado con una arquitectura hexagonal usando **Spring Boot**, **Angular**, **MySQL** y **Docker**.
+Aplicacion para el manejo de Tareas, desarrollado con una arquitectura por capas usando **Spring Boot**, **Angular**, **MySQL** y **Docker**.
 
 ## 📦 Estructura del Proyecto
 
